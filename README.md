@@ -37,6 +37,6 @@ to start the server
 
 
 got to
-http://127.0.0.1:port/swagger/ to access swagger
+http://127.0.0.1:8000/swagger/ to access swagger
 
 
