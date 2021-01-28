@@ -139,6 +139,7 @@ class ShowAPIView(APIView):
         if serializer.is_valid():
             screen_id = request.data['theatre_screen']
             screen = TheatreScreen.objects.get(screen_id=screen_id)
+            serializer.save()
             for seats in range(screen.total_seats):
                 seat = ShowSeat(seat_num=seats+1,show=Show.objects.get(show_id=serializer.data['show_id']))
                 seat.save()
